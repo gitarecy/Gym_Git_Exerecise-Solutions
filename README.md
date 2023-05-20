@@ -463,9 +463,384 @@ To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
    71eb597..355342a  ft/service-redesign -> ft/service-redesign
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 
+```
+```
+BUNDLE 3
+--------
+EXERCISE 1
+----------
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$ vi team.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$ git add .
+warning: in the working copy of 'team.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$ git commit -m "Added team.html"
+[ft/team-page 454fab3] Added team.html
+ 1 file changed, 15 insertions(+)
+ create mode 100644 team.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 337.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym_Git_Exerecise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git commit -m "created new branch"
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$ git log
+commit 454fab3480254922549aef27d1a957ef11371f7e (HEAD -> ft/team-page, origin/ft/team-page)
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 09:57:16 2023 +0200
+
+    Added team.html
+
+commit 482be4329ad367c73226e68263cc8f760979ed7a (origin/main, main, ft/contact-page)
+Merge: 4449ea0 299f89f
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 09:29:36 2023 +0200
+
+    Merge branch 'main' of https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+
+commit 4449ea0944c7ebdaf89a681a4b82aede1a88d32e
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 09:29:23 2023 +0200
+
+    updates on readme
+
+commit 299f89f92cca0ec55456ff98b3d5baec6dafaa44
+Merge: 7b48fe5 71eb597
+Author: gitarecy <98228087+gitarecy@users.noreply.github.com>
 
 
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$
 
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git cherry-pick 454fab3480254922549aef27d1a957ef11371f7e
+[ft/contact-page 2ed6f1a] Added team.html
+ Date: Sat May 20 09:57:16 2023 +0200
+ 1 file changed, 15 insertions(+)
+ create mode 100644 team.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ nano contact.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ vi contact.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git add .
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git commit -m "Added contact.html page"
+[ft/contact-page c5e0236] Added contact.html page
+ 1 file changed, 15 insertions(+)
+ create mode 100644 contact.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 582 bytes | 291.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym_Git_Exerecise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ vi faq.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git add .
+warning: in the working copy of 'faq.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git commit -m "added faq page"
+[ft/faq-page 58a2be4] added faq page
+ 1 file changed, 15 insertions(+)
+ create mode 100644 faq.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym_Git_Exerecise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git log
+commit 58a2be474fd69407735b1e946b876a489839f861 (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 10:53:04 2023 +0200
+
+    added faq page
+
+commit c5e0236336928a782e336ada57fd3758276c6c31 (origin/ft/contact-page, ft/contact-page)
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 10:49:57 2023 +0200
+
+    Added contact.html page
+
+commit 2ed6f1a056ff9a42ca438f10ce194b8613ae5eb0
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 09:57:16 2023 +0200
+
+    Added team.html
+
+commit 482be4329ad367c73226e68263cc8f760979ed7a (origin/main, main)
+Merge: 4449ea0 299f89f
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 09:29:36 2023 +0200
+
+:
+commit 58a2be474fd69407735b1e946b876a489839f861 (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 10:53:04 2023 +0200
+
+    added faq page
+
+commit c5e0236336928a782e336ada57fd3758276c6c31 (origin/ft/contact-page, ft/contact-page)
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 10:49:57 2023 +0200
+
+    Added contact.html page
+
+commit 2ed6f1a056ff9a42ca438f10ce194b8613ae5eb0
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 09:57:16 2023 +0200
+
+    Added team.html
+
+commit 482be4329ad367c73226e68263cc8f760979ed7a (origin/main, main)
+Merge: 4449ea0 299f89f
+Author: gitarecy <gitarecynthia@gmail.com>
+Date:   Sat May 20 09:29:36 2023 +0200
+
+    Merge branch 'main' of https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git revert 454fab3480254922549aef27d1a957ef11371f7e
+[ft/faq-page b6fa313] Revert "Added team.html"
+ 1 file changed, 15 deletions(-)
+ delete mode 100644 team.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git commit -m "revert changes of the last commit of the ft/team-page"
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 270 bytes | 270.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   58a2be4..b6fa313  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+
+
+EXERCISE 2
+----------
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ ls
+README.md  file.txt  service.html  services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git pull
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (8/8), done.
+Unpacking objects: 100% (8/8), 2.60 KiB | 78.00 KiB/s, done.
+remote: Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
+From https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   482be43..82cdbf5  main       -> origin/main
+Updating 482be43..82cdbf5
+Fast-forward
+ about.html   | 15 +++++++++++++++
+ contact.html | 15 +++++++++++++++
+ faq.html     | 15 +++++++++++++++
+ home.html    | 15 +++++++++++++++
+ 4 files changed, 60 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 faq.html
+ create mode 100644 home.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push
+Everything up-to-date
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git commit -m "update main"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push
+Everything up-to-date
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ ls
+README.md   contact.html  file.txt   service.html
+about.html  faq.html      home.html  services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ vi home.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git commit -m "changes to home.html"
+[main 4989ce3] changes to home.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   82cdbf5..4989ce3  main -> main
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
+$ ls
+README.md   contact.html  file.txt   service.html
+about.html  faq.html      home.html  services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
+$ vi home.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
+$ git commit -m "Changes to home page"
+[ft/home-page-redesign 36890ce] Changes to home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym_Git_Exerecise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
 
 
 ```
