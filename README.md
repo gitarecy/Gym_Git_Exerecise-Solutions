@@ -1047,6 +1047,49 @@ LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/squashing)
 
 
 ```
+# Bundle 5
+## Exercise 1
+```
+https://gitarecy.github.io/Gym_Git_Exerecise-Solutions/
+```
+## Exercise 2
+```
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git clone https://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@github.com/gitarecy/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 100
+Receiving objects: 100% (107/107), 1.95 MiB | 140.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ cd git-cafe-exercise/
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise/git-cafe-exercise (main)
+$ vi index.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise/git-cafe-exercise (main)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise/git-cafe-exercise (main)
+$ git commit -m 'welcome to our restaurant'
+[main 536c074] welcome to our restaurant
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 327 bytes | 327.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gitarecy/git-cafe-exercise.git
+   d1d3f9c..536c074  main -> main
+```
 =======
 # Gym-Git-exrecise-Bundle4
 >>>>>>> a54b8f6be61c3cdd8e91354cea9e7c926b94fe71
