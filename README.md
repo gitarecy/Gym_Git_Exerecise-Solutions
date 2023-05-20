@@ -226,6 +226,245 @@ BUNDLE 2
 -------
 EXERCISE 1
 ---------
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (main)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (ft/bundle-2)
+$ ls
+README.md
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (ft/bundle-2)
+$ vi services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (ft/bundle-2)
+$ ls
+README.md  services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (ft/bundle-2)
+$ git add .
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (ft/bundle-2)
+$ git commit -m "Added service.html to the ft/bundle-2 branch and made changes"
+[ft/bundle-2 142f508] Added service.html to the ft/bundle-2 branch and made changes
+ 1 file changed, 14 insertions(+)
+ create mode 100644 services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 375 bytes | 187.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/gitarecy/Gym-Git-Exercise-Solutions
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym_Git-Exercises (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+EXERCISE 2
+----------
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ ls
+README.md  file.txt
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git add .
+warning: in the working copy of 'service.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git commit -m "new service.html file added"
+[ft/service-redesign 723e492] new service.html file added
+ 1 file changed, 15 insertions(+)
+ create mode 100644 service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 390 bytes | 390.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym_Git_Exerecise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ ls
+README.md  file.txt
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git add .
+warning: in the working copy of 'service.html', LF will be replaced by CRLF the next time Git touches it
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git commit -m "added service.html changes"
+[main 637fb78] added service.html changes
+ 1 file changed, 15 insertions(+)
+ create mode 100644 service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/gitarecy/Gym_Git_Exerecise-Solutions'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 626 bytes | 156.00 KiB/s, done.
+From https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   53fda89..3278d5f  main       -> origin/main
+Merge made by the 'ort' strategy.
+ services.html | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 590 bytes | 590.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   3278d5f..7b48fe5  main -> main
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git diff main
+diff --git a/service.html b/service.html
+index e36592b..4807ee2 100644
+--- a/service.html
++++ b/service.html
+@@ -3,7 +3,7 @@
+
+ <HEAD>
+
+-<TITLE>new service</TITLE>
++<TITLE>service</TITLE>
+
+ </HEAD>
+
+diff --git a/services.html b/services.html
+deleted file mode 100644
+index 5876f81..0000000
+--- a/services.html
++++ /dev/null
+@@ -1,15 +0,0 @@
+-<!DOCTYPE html>
+-<HTML>
+-
+-<HEAD>
+
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ vi service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git commit -m "kept new changes to service.html"
+[ft/service-redesign 71eb597] kept new changes to service.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 112.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   723e492..71eb597  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git merge main
+Merge made by the 'ort' strategy.
+ services.html | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git add service.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git commit -m "Merged main branch with ft/service-redesign"
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.29 KiB | 440.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   71eb597..355342a  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+
+
 
 
 
