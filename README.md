@@ -845,6 +845,208 @@ LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/home-page-redesign)
 
 
 ```
+```
+BUNDLE 4
+--------
+EXERCISE 1
+----------
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (git-copy)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git remote add git-copy https://github.com/gitarecy/Gym-Git-exrecise-Bundle4
+error: remote git-copy already exists.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ ls
+README.md   contact.html  file.txt   service.html
+about.html  faq.html      home.html  services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ vi home.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git commit -m "updating the home page"
+[main 5aceecd] updating the home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+   df32389..5aceecd  main -> main
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push git-copy main
+To https://github.com/gitarecy/Gym-Git-exrecise-Bundle4
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/gitarecy/Gym-Git-exrecise-Bundle4'
+OAhint: Updates were rejected because the tip of your current branch is behind
+OAhint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+OALENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git pull git-copy main
+From https://github.com/gitarecy/Gym-Git-exrecise-Bundle4
+OA * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+OA
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git pull --allow-unrelated-histories git-copy main
+From https://github.com/gitarecy/Gym-Git-exrecise-Bundle4
+ * branch            main       -> FETCH_HEAD
+OAAuto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main|MERGING)
+$ vi README.md
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main|MERGING)
+$ git add README.md
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main|MERGING)
+$ git commit
+[main ca7e119] Merge branch 'main' of https://github.com/gitarecy/Gym-Git-exrecise-Bundle4
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git push git-copy main
+Enumerating objects: 74, done.
+Counting objects: 100% (74/74), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (69/69), done.
+Writing objects: 100% (72/72), 14.60 KiB | 2.92 MiB/s, done.
+Total 72 (delta 33), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (33/33), done.
+To https://github.com/gitarecy/Gym-Git-exrecise-Bundle4
+   a54b8f6..ca7e119  main -> main
+
+
+EXERCISE 2
+----------
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ ls
+README.md   contact.html  file.txt   service.html
+about.html  faq.html      home.html  services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ vi home.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ git commit -m "changes to home"
+[ft/footer 02afdfb] changes to home
+ 1 file changed, 2 insertions(+)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ ls
+README.md   contact.html  file.txt   service.html
+about.html  faq.html      home.html  services.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ vi contact.html
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ git commit -m "changes to contact"
+[ft/footer 24fceb4] changes to contact
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.61 KiB | 823.00 KiB/s, done.
+Total 12 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym_Git_Exerecise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating ca7e119..24fceb4
+Fast-forward
+Squash commit -- not updating HEAD
+ contact.html | 2 +-
+ home.html    | 2 ++
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/squashing)
+$ git add .
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 23b1828] footer changes squashing
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 429 bytes | 429.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/gitarecy/Gym_Git_Exerecise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/gitarecy/Gym_Git_Exerecise-Solutions
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+LENOVO@DESKTOP-5GQ3HIK MINGW64 ~/Gym-git-exercise (ft/squashing)
+
+
+```
 =======
 # Gym-Git-exrecise-Bundle4
 >>>>>>> a54b8f6be61c3cdd8e91354cea9e7c926b94fe71
